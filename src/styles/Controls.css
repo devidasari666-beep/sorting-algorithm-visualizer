@@ -1,39 +1,36 @@
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+.controls{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
     flex-wrap: wrap;
 
-    padding: 20px;
-    background: #f3f4f6;
+    padding:20px;
+    background:white;
 }
 
-.control-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+.control-group{
+    display:flex;
+    flex-direction:column;
 }
 
-.control-group label {
-    font-weight: bold;
+select{
+    padding:8px 12px;
+    border-radius:6px;
+    border:1px solid #d1d5db;
+    font-size:1rem;
 }
 
-select,
-input {
-    padding: 6px;
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    background:#2563eb;
+    color:white;
 }
 
-button {
-    padding: 10px 18px;
-    border: none;
-    cursor: pointer;
-    background: #2563eb;
-    color: white;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #1d4ed8;
+button:hover{
+    background:#1d4ed8;
 }

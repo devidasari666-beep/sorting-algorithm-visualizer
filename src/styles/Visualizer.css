@@ -1,24 +1,29 @@
 .visualizer {
+    width: 95%;
     height: 500px;
-
+    margin: 30px auto;
     display: flex;
-
-    justify-content: center;
-
     align-items: flex-end;
-
-    gap: 4px;
-
-    margin-top: 30px;
+    gap: 3px;
+    background: #111827;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .array-bar {
+    flex: 1;
+    background: #3b82f6;
+    transition: height 0.2s, background 0.2s;
+}
 
-    width: 18px;
+.array-bar.comparing {
+    background: yellow;
+}
 
-    background: #2563eb;
+.array-bar.swapping {
+    background: red;
+}
 
-    border-radius: 4px 4px 0 0;
-
-    transition: height 0.3s;
+.array-bar.sorted {
+    background: green;
 }
