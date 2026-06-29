@@ -1,5 +1,5 @@
 import "../styles/Controls.css";
-import { useState } from "react";
+
 function Controls({
     arraySize,
     speed,
@@ -11,7 +11,7 @@ function Controls({
     onStart,
     isSorting,
 }) {
-    
+
     return (
         <div className="controls">
 
@@ -41,18 +41,20 @@ function Controls({
                 />
             </div>
 
-            <div>
+            <div className="control-group">
                 <label>Algorithm</label>
-        <select
-          value={algorithm}
-          onChange={(e) =>  onAlgorithmChange(e.target.value)}
-        >
-          <option value="bubble">Bubble Sort</option>
-          <option value="selection">Selection Sort</option>
-          <option value="insertion">Insertion Sort</option>
-          <option value="merge">Merge Sort</option>
-          <option value="quick">Quick Sort</option>
-        </select>
+                <select
+                    value={algorithm}
+                    onChange={(e) => onAlgorithmChange(e.target.value)}
+                    disabled={isSorting}
+                >
+                    <option value="" disabled>-- Select Algorithm --</option>
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="quick">Quick Sort</option>
+                </select>
             </div>
 
             <button
@@ -64,7 +66,7 @@ function Controls({
 
             <button
                 onClick={onStart}
-                disabled={isSorting}
+                disabled={isSorting || !algorithm}
             >
                 Start Sorting
             </button>

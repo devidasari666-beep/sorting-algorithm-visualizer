@@ -17,7 +17,7 @@ function App() {
     const [arraySize, setArraySize] = useState(30);
     const [speed, setSpeed] = useState(50);
     const [isSorting, setIsSorting] = useState(false);
-    const [algorithm, setAlgorithm] = useState("bubble");
+    const [algorithm, setAlgorithm] = useState("");
     const [array, setArray] = useState(() => generateArray(30));
     const [comparisons, setComparisons] = useState(0);
     const [swaps, setSwaps] = useState(0);
@@ -32,6 +32,11 @@ function App() {
     }
 
     async function handleStart() {
+
+        if (!algorithm) {
+            alert("Please select an algorithm first!");
+            return;
+        }
 
         setIsSorting(true);
         setComparisons(0);
